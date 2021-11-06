@@ -17,7 +17,14 @@ public class Movie {
         actorsList.add(actor);
     }
 
-    public void  actorsInTheirTwenties() {
-        System.out.println();
+    public int  actorsInTheirTwenties() {
+        int counter = 0;
+        for (Actor a: actorsList) {
+            if ((year - a.getYearOfBirth()) <= 30) {
+                counter++;
+            }
+        }
+        return counter;
     }
+
 }
